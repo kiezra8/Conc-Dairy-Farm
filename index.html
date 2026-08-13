@@ -48,23 +48,44 @@
         "@type": "WebSite",
         "@id": "https://concdairyfarm.com/#website",
         "url": "https://concdairyfarm.com/",
-        "name": "CONC Dairy Farm Official Website",
-        "description": "Official standalone website of CONC Dairy Farm in Nakifuma, Uganda.",
+        "name": "CONC Dairy Farm – Official Website",
+        "description": "The official active website of CONC Dairy Farm, an integrated agricultural business in Nakifuma, Mukono District, Uganda.",
+        "inLanguage": "en",
         "publisher": {
           "@id": "https://concdairyfarm.com/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://concdairyfarm.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
         }
       },
       {
-        "@type": ["LocalBusiness", "AgriculturalBusiness"],
+        "@type": ["LocalBusiness", "AgriculturalBusiness", "FoodEstablishment"],
         "@id": "https://concdairyfarm.com/#organization",
         "name": "CONC Dairy Farm",
-        "alternateName": ["CONC Farm", "CONC Dairy Farm Uganda"],
+        "legalName": "CONC Dairy Farm Uganda",
+        "alternateName": ["CONC Farm", "CONC Dairy Farm Uganda", "concdairyfarm.com"],
         "url": "https://concdairyfarm.com/",
-        "logo": "https://concdairyfarm.com/favicon.png",
-        "image": "https://i.pinimg.com/1200x/4c/20/47/4c20474cfe87648e34e0ec321bacba11.jpg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://concdairyfarm.com/favicon.png",
+          "width": 192,
+          "height": 192
+        },
+        "image": [
+          "https://i.pinimg.com/1200x/4c/20/47/4c20474cfe87648e34e0ec321bacba11.jpg",
+          "https://i.pinimg.com/1200x/37/69/eb/3769eb4de21694bea4da4c54123359ff.jpg",
+          "https://i.pinimg.com/736x/65/21/c0/6521c05c369041906648e9a3425e6ad6.jpg"
+        ],
         "telephone": "+256785006055",
         "email": "hello@concdairyfarm.com",
         "priceRange": "$$",
+        "currenciesAccepted": "UGX",
+        "paymentAccepted": "Cash, Mobile Money",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "CONC Farm Road, Nakifuma",
@@ -112,18 +133,35 @@
             "jobTitle": "SACCO Manager"
           }
         ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "CONC Dairy Farm Products & Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dairy Farming & Fresh Milk"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cattle Breeding"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Boma Rhodes Hay & Silage Pasture Production"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Artisan Probiotic Yogurt Production"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fresh Dairy Products – Butter, Cheese, Ghee"}}
+          ]
+        },
         "sameAs": [
           "https://wa.me/256785006055",
           "https://www.tiktok.com/@mrjbhalera"
         ],
-        "description": "Official standalone website of CONC Dairy Farm in Nakifuma, Uganda. Offering dairy farming, cattle breeding, hay & silage pasture production, artisan yogurt production, and fresh dairy products."
+        "description": "CONC Dairy Farm is an active, official integrated agricultural business headquartered in Nakifuma, Mukono District, Uganda. The farm operates a live official website at concdairyfarm.com offering dairy farming, cattle breeding, Boma Rhodes hay and silage pasture production, artisan probiotic yogurt production, and premium fresh dairy products.",
+        "subjectOf": {
+          "@id": "https://concdairyfarm.com/#webpage"
+        }
       },
       {
         "@type": "WebPage",
         "@id": "https://concdairyfarm.com/#webpage",
         "url": "https://concdairyfarm.com/",
-        "name": "CONC Dairy Farm Uganda – Active Official Platform",
-        "description": "Active official standalone web platform of CONC Dairy Farm in Nakifuma, Uganda.",
+        "name": "CONC Dairy Farm Uganda – Official Website | Pure, Natural & Premium Dairy",
+        "description": "The active official website of CONC Dairy Farm in Nakifuma, Uganda. This domain hosts the live standalone official platform for CONC Dairy Farm.",
+        "inLanguage": "en",
+        "datePublished": "2026-08-13",
+        "dateModified": "2026-08-13",
         "isPartOf": {
           "@id": "https://concdairyfarm.com/#website"
         },
@@ -132,6 +170,60 @@
         },
         "mainEntity": {
           "@id": "https://concdairyfarm.com/#organization"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://i.pinimg.com/1200x/4c/20/47/4c20474cfe87648e34e0ec321bacba11.jpg"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage Schema for Google Rich Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does CONC Dairy Farm have an official website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The official active website of CONC Dairy Farm is concdairyfarm.com. It is a live standalone platform hosting information about all farm services, products, team, and contact details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does CONC Dairy Farm do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CONC Dairy Farm is an integrated agricultural business in Nakifuma, Mukono District, Uganda. It offers dairy farming and fresh milk production, superior cattle breeding, Boma Rhodes hay and silage pasture production, artisan probiotic yogurt production, and premium fresh dairy products including butter, cheese, ghee and cream."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is CONC Dairy Farm located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CONC Dairy Farm is located on CONC Farm Road, Nakifuma, Mukono District, Uganda. The farm is managed by Mr. Jb Halera and is open Monday to Saturday from 6AM to 6PM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact CONC Dairy Farm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can contact CONC Dairy Farm via WhatsApp at +256785006055, by calling 0785006055, or by emailing hello@concdairyfarm.com. You can also visit the official website at concdairyfarm.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who manages CONC Dairy Farm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CONC Dairy Farm is founded and managed by Mr. Jb Halera as Managing Director, alongside Kenny (Farm Manager & Lead Vet), Antipa (Supervisor & Management), and Jeofrey (SACCO Manager)."
         }
       }
     ]
@@ -805,7 +897,7 @@
             <h4>Contact</h4>
             <ul class="plain">
               <li>💬 WhatsApp: <a href="https://wa.me/256785006055?text=Hello%20CONC%20Dairy%20Farm" target="_blank" rel="noopener" style="color:var(--green-glow);">0785006055</a></li>
-              <li>✉️ concdairyfarm.com</li>
+              <li>✉️ <a href="mailto:hello@concdairyfarm.com" style="color:var(--green-glow);">hello@concdairyfarm.com</a></li>
               <li>📍 CONC Farm Road, Nakifuma, Uganda</li>
               <li>🕐 Mon–Sat: 6AM – 6PM</li>
             </ul>

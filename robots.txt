@@ -1,5 +1,17 @@
-# Google & Search Engine Crawling Instructions
+# CONC Dairy Farm – Official Website: concdairyfarm.com
+# Search Engine Crawling Instructions
 User-agent: *
+Allow: /
+
+# Google-specific crawl hints
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
 Allow: /
 
 Sitemap: https://concdairyfarm.com/sitemap.xml
