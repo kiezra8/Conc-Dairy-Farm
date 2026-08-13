@@ -425,18 +425,51 @@ ul { list-style: none; }
 /* ================================================================
    SERVICES  (GIMC Programs style – 5 cards)
    ================================================================ */
+/* ================================================================
+   SERVICES (Five Pillars of Our Farm)
+   ================================================================ */
 .services-sec {
-  padding: 110px 0;
-  background: linear-gradient(180deg, #060f0a 0%, #0b1c11 100%);
+  padding: 100px 0;
+  background: var(--forest-2);
 }
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 28px;
 }
-/* Last 2 cards — centered bottom row */
-.services-grid > .srv-card:nth-child(4) { grid-column: 1; }
-.services-grid > .srv-card:nth-child(5) { grid-column: 2; }
+/* Row 1: 3 cards taking 2 columns each */
+.services-grid > .srv-card:nth-child(1) { grid-column: span 2; }
+.services-grid > .srv-card:nth-child(2) { grid-column: span 2; }
+.services-grid > .srv-card:nth-child(3) { grid-column: span 2; }
+/* Row 2: 2 cards centered (start at col 2, take 2 cols each) */
+.services-grid > .srv-card:nth-child(4) { grid-column: 2 / span 2; }
+.services-grid > .srv-card:nth-child(5) { grid-column: 4 / span 2; }
+
+.card-img-header {
+  position: relative;
+  width: 100%;
+  height: 265px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.card-img-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+.srv-card:hover .card-img-header img {
+  transform: scale(1.08);
+}
+.srv-num-badge {
+  position: absolute; top: 12px; right: 12px;
+  background: rgba(6,15,10,0.85); color: var(--green-glow);
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em;
+  padding: 3px 10px; border-radius: 999px;
+  border: 1px solid rgba(61,220,122,0.3);
+  z-index: 2;
+}
 
 .srv-card {
   position: relative;
@@ -458,7 +491,7 @@ ul { list-style: none; }
 }
 .srv-card:hover::after { transform: scaleX(1); }
 .srv-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: rgba(61,220,122,0.45);
   box-shadow: 0 22px 50px rgba(0,0,0,0.45), 0 0 20px rgba(61,220,122,0.12);
 }
@@ -466,42 +499,60 @@ ul { list-style: none; }
   border-color: rgba(61,220,122,0.35);
   background: #0e2718;
 }
+.card-body-content {
+  padding: 16px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
 .srv-header {
-  display: flex; align-items: center; gap: 14px; margin-bottom: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  width: 100%;
 }
 .srv-icon-wrap {
-  width: 52px; height: 52px; flex-shrink: 0;
-  background: rgba(26,138,69,0.18); border: 1px solid rgba(61,220,122,0.22);
-  border-radius: 13px; display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; flex-shrink: 0;
+  background: rgba(26,138,69,0.22); border: 1px solid rgba(61,220,122,0.28);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
 }
-.srv-icon { font-size: 1.5rem; }
-.srv-num {
-  display: block; font-size: 0.68rem; font-weight: 700; color: var(--green-glow);
-  letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 4px;
-}
+.srv-icon { font-size: 1.15rem; }
 .srv-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem; font-weight: 700; color: var(--white);
+  text-align: center;
 }
-.srv-card > p { font-size: 0.88rem; color: var(--muted); line-height: 1.68; margin-bottom: 20px; }
+.card-body-content p {
+  font-size: 0.84rem; color: var(--muted); line-height: 1.45; margin-bottom: 10px;
+  text-align: center;
+}
 .srv-list {
-  display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;
+  display: flex; flex-direction: column; gap: 5px; margin: 4px 0 12px;
+  padding: 0; list-style: none; width: 100%; align-items: center;
 }
 .srv-list li {
-  font-size: 0.84rem; color: var(--lt);
-  display: flex; align-items: center; gap: 8px;
+  font-size: 0.8rem; color: rgba(255,255,255,0.9);
+  text-align: center;
+  padding: 3px 10px;
+  background: rgba(61,220,122,0.06);
+  border: 1px solid rgba(61,220,122,0.14);
+  border-radius: 999px;
+  width: 100%; max-width: 240px;
 }
 .srv-list li::before {
-  content: '';
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--green-glow); flex-shrink: 0;
+  display: none;
 }
 .srv-link {
   font-size: 0.85rem; font-weight: 700; color: var(--green-glow);
-  display: inline-flex; align-items: center; gap: 4px;
-  transition: var(--ease);
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; margin-top: auto;
+  transition: var(--ease); text-align: center;
 }
-.srv-link:hover { gap: 8px; color: #fff; }
+.srv-link:hover { gap: 10px; color: #fff; }
 
 /* ================================================================
    WHY US
@@ -755,8 +806,12 @@ ul { list-style: none; }
    ================================================================ */
 @media (max-width: 1100px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid > .srv-card:nth-child(1),
+  .services-grid > .srv-card:nth-child(2),
+  .services-grid > .srv-card:nth-child(3),
   .services-grid > .srv-card:nth-child(4),
   .services-grid > .srv-card:nth-child(5) { grid-column: auto; }
+  .services-grid > .srv-card:nth-child(5) { grid-column: span 2; max-width: 540px; margin: 0 auto; width: 100%; }
   .pillars-grid { grid-template-columns: 1fr 1fr; }
   .pillars-grid > .pillar-card:nth-child(3) { grid-column: span 2; max-width: 540px; margin: 0 auto; width: 100%; }
 }

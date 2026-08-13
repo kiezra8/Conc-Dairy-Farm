@@ -1,0 +1,5 @@
+# Google & Search Engine Crawling Instructions
+User-agent: *
+Allow: /
+
+Sitemap: https://concdairyfarm.com/sitemap.xml
