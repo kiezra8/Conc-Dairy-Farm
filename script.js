@@ -1,18 +1,18 @@
 /* ===================================================================
-   CONC DAIRY FARM – script.js  (v2)
+   CONC DAIRY FARM – script.js  (v3 – GIMC-inspired redesign)
    =================================================================== */
 'use strict';
 
 /* ── Carousel ── */
 (function () {
-  const slides  = document.querySelectorAll('.c-slide');
-  const dots    = document.querySelectorAll('.c-dot');
-  const prev    = document.getElementById('c-prev');
-  const next    = document.getElementById('c-next');
+  const slides = document.querySelectorAll('.c-slide');
+  const dots   = document.querySelectorAll('.c-dot');
+  const prev   = document.getElementById('c-prev');
+  const next   = document.getElementById('c-next');
   if (!slides.length) return;
 
   let cur = 0, timer = null;
-  const DELAY = 5000;
+  const DELAY = 5500;
 
   function goTo(idx) {
     slides[cur].classList.remove('active');
@@ -38,7 +38,7 @@
 
   dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.idx); resetTimer(); }));
 
-  // Swipe
+  // Touch swipe
   let sx = 0;
   const wrap = document.querySelector('.hero');
   if (wrap) {
@@ -105,7 +105,7 @@
 })();
 
 
-/* ── Scroll reveal  (runs AFTER DOM is painted) ── */
+/* ── Scroll reveal ── */
 (function () {
   const els = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
   if (!els.length) return;
@@ -117,7 +117,7 @@
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   els.forEach(el => io.observe(el));
 })();
@@ -166,16 +166,36 @@
 })();
 
 
-/* ── Parallax farm bg ── */
+/* ── Parallax SACCO bg ── */
 (function () {
-  const img = document.getElementById('farm-parallax');
+  const img = document.getElementById('sacco-parallax');
   if (!img) return;
   const fn = () => {
-    const sec  = img.closest('.farm-sec');
+    const sec  = img.closest('.sacco-sec');
     if (!sec) return;
     const rect = sec.getBoundingClientRect();
     const pct  = rect.top / innerHeight;
-    img.style.transform = `translateY(${pct * -25}px)`;
+    img.style.transform = `translateY(${pct * -22}px)`;
   };
   addEventListener('scroll', fn, { passive: true });
+})();
+
+
+/* ── Active nav link highlighting on scroll ── */
+(function () {
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (!sections.length || !navLinks.length) return;
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => io.observe(s));
 })();
