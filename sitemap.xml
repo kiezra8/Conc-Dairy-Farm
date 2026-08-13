@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://concdairyfarm.com/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    
+    <!-- Video 1: Daily Operations -->
+    <video:video>
+      <video:thumbnail_loc>https://i.pinimg.com/1200x/37/69/eb/3769eb4de21694bea4da4c54123359ff.jpg</video:thumbnail_loc>
+      <video:title>CONC Dairy Farm Daily Operations</video:title>
+      <video:description>Watch live daily dairy farming, cattle milking, and pasture management at CONC Dairy Farm in Nakifuma, Uganda.</video:description>
+      <video:content_loc>https://concdairyfarm.com/WhatsApp%20Video%202026-08-13%20at%203.50.42%20PM.mp4</video:content_loc>
+      <video:player_loc>https://concdairyfarm.com/#video-1</video:player_loc>
+      <video:publication_date>2026-08-13T12:00:00+03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+
+    <!-- Video 2: Herd & Care -->
+    <video:video>
+      <video:thumbnail_loc>https://i.pinimg.com/736x/65/21/c0/6521c05c369041906648e9a3425e6ad6.jpg</video:thumbnail_loc>
+      <video:title>CONC Dairy Farm Cattle Herd &amp; Care</video:title>
+      <video:description>Cattle breeding, feeding routines, and animal care live video footage at CONC Dairy Farm.</video:description>
+      <video:content_loc>https://concdairyfarm.com/WhatsApp%20Video%202026-08-13%20at%203.50.42%20PM%20(1).mp4</video:content_loc>
+      <video:player_loc>https://concdairyfarm.com/#video-2</video:player_loc>
+      <video:publication_date>2026-08-13T12:00:00+03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+
+    <!-- Video 3: Processing & Yogurt -->
+    <video:video>
+      <video:thumbnail_loc>https://i.pinimg.com/1200x/96/69/89/966989c495b5a1953b71c80d98a94a0c.jpg</video:thumbnail_loc>
+      <video:title>CONC Farm Life &amp; Yogurt Processing</video:title>
+      <video:description>Fresh milk processing and artisan yogurt production video at CONC Dairy Farm.</video:description>
+      <video:content_loc>https://concdairyfarm.com/WhatsApp%20Video%202026-08-13%20at%203.55.37%20PM.mp4</video:content_loc>
+      <video:player_loc>https://concdairyfarm.com/#video-3</video:player_loc>
+      <video:publication_date>2026-08-13T12:00:00+03:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
+
   <url>
     <loc>https://concdairyfarm.com/#services</loc>
     <lastmod>2026-08-13</lastmod>
