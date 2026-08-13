@@ -229,7 +229,7 @@ ul { list-style: none; }
 /* ================================================================
    ABOUT (Our Story - Clean Card Layout)
    ================================================================ */
-.about { padding: 100px 0; background: var(--forest-2); }
+.about { padding: 45px 0 100px; background: var(--forest-2); }
 .about-card-wrap {
   background: rgba(11,28,17,0.85);
   border: 1px solid rgba(61,220,122,0.18);
@@ -324,7 +324,7 @@ ul { list-style: none; }
 /* ================================================================
    ACTIVITIES / GALLERY  (GIMC Outreaches style)
    ================================================================ */
-.activities-sec { padding: 110px 0; background: var(--forest-2); }
+.activities-sec { padding: 90px 0 40px; background: var(--forest-2); }
 .activities-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -355,15 +355,36 @@ ul { list-style: none; }
 .act-wide { grid-column: span 2; }
 
 /* ================================================================
-   SIDEWAYS AUTO-SCROLLING VIDEO CAROUSEL
+   SIDEWAYS VIDEO CAROUSEL
    ================================================================ */
 .video-carousel-wrap {
-  margin-top: 56px;
-  padding-top: 40px;
+  margin-top: 36px;
+  padding-top: 28px;
   border-top: 1px solid rgba(61,220,122,0.12);
 }
 .v-sec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 24px;
+}
+.v-nav-btns {
+  display: flex;
+  gap: 12px;
+}
+.v-nav-btn {
+  width: 44px; height: 44px;
+  background: rgba(26,138,69,0.25);
+  border: 1px solid rgba(61,220,122,0.3);
+  color: #fff; border-radius: 50%;
+  font-size: 1.4rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--ease);
+}
+.v-nav-btn:hover {
+  background: var(--green);
+  border-color: var(--green-glow);
+  transform: scale(1.08);
 }
 .v-tag {
   font-size: 0.78rem; font-weight: 700; color: var(--green-glow);
@@ -379,10 +400,13 @@ ul { list-style: none; }
 .video-track-container {
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: rgba(61,220,122,0.3) transparent;
-  padding: 12px 4px 20px;
+  padding: 12px 4px 24px;
+  cursor: grab;
 }
+.video-track-container:active { cursor: grabbing; }
 .video-track-container::-webkit-scrollbar { height: 6px; }
 .video-track-container::-webkit-scrollbar-thumb { background: rgba(61,220,122,0.3); border-radius: 999px; }
 
@@ -393,11 +417,12 @@ ul { list-style: none; }
 }
 .v-card {
   position: relative;
-  width: 320px; height: 220px;
+  width: 380px; height: 300px;
+  scroll-snap-align: start;
   border-radius: var(--radius-lg);
   overflow: hidden; flex-shrink: 0;
-  border: 1px solid rgba(61,220,122,0.22);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(61,220,122,0.25);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.45);
   background: #000;
   transition: transform 0.4s ease, border-color 0.4s ease;
 }
@@ -410,8 +435,8 @@ ul { list-style: none; }
 }
 .v-card-info {
   position: absolute; bottom: 0; left: 0; right: 0;
-  padding: 16px;
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  padding: 18px;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, transparent 100%);
   display: flex; flex-direction: column; gap: 4px;
 }
 .v-badge {
@@ -419,7 +444,7 @@ ul { list-style: none; }
   text-transform: uppercase; letter-spacing: 0.12em;
 }
 .v-card-info h4 {
-  font-size: 0.88rem; font-weight: 700; color: var(--white);
+  font-size: 0.95rem; font-weight: 700; color: var(--white);
 }
 
 /* ================================================================

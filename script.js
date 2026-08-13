@@ -201,31 +201,26 @@
 })();
 
 
-/* ── Video Track Auto-Scroll & Intersection Play ── */
+/* ── Video Track Manual Slide & Intersection Play ── */
 (function () {
   const container = document.getElementById('video-track-container');
   const videos    = document.querySelectorAll('.farm-video');
+  const prevBtn   = document.getElementById('v-prev-btn');
+  const nextBtn   = document.getElementById('v-next-btn');
+
   if (!container || !videos.length) return;
 
-  // Auto-scroll sideways smoothly
-  let isHovered = false;
-
-  function autoScroll() {
-    if (!isHovered) {
-      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 2) {
-        container.scrollLeft = 0;
-      } else {
-        container.scrollLeft += 1;
-      }
-    }
+  // Manual Next/Prev button click handlers
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      container.scrollBy({ left: -380, behavior: 'smooth' });
+    });
   }
-
-  setInterval(autoScroll, 30);
-
-  container.addEventListener('mouseenter', () => { isHovered = true; });
-  container.addEventListener('mouseleave', () => { isHovered = false; });
-  container.addEventListener('touchstart', () => { isHovered = true; }, { passive: true });
-  container.addEventListener('touchend',   () => { isHovered = false; }, { passive: true });
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      container.scrollBy({ left: 380, behavior: 'smooth' });
+    });
+  }
 
   // Play videos one by one when reached on scroll
   const videoObserver = new IntersectionObserver((entries) => {
